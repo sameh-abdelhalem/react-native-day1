@@ -1,0 +1,6 @@
+Create react native app
+//set static list of students at file and import this array of students object to main list component
+2-creaet list of  students with native base design and set button delete for each list item and button for edit 
+3-handle delete action button to remove the selected student from list
+4-create add component at separate file and add new student object to student list
+5-make edit component with separate file and edit for selected student 
