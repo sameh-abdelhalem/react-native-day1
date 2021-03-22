@@ -35,17 +35,3 @@ export default class App extends React.Component {
     );
   }
 }
-const Styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    backgroundColor: 'lightgreen',
-  },
-  contentData: {
-    backgroundColor: 'pink',
-    borderWidth: 1,
-    borderColor: 'green',
-  },
-});

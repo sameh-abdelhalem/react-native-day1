@@ -14,8 +14,10 @@ import {
   Body,
   Right,
   Button,
+  Form,
 } from 'native-base';
 import Students from '../../Data/StudentData';
+import {Alert, StyleSheet, View} from 'react-native';
 export default class StudentList extends Component {
   state = {
     StdArray: Students,
@@ -37,10 +39,6 @@ export default class StudentList extends Component {
       StdArray: this.state.StdArray,
     });
   };
-  // AddnewElement() {
-  //     console.log(this);
-  //     console.log(this.state.StdArray)
-  // }
 
   render() {
     return (
@@ -50,7 +48,7 @@ export default class StudentList extends Component {
           <List>
             {this.state.StdArray.map((std, i) => {
               return (
-                <ListItem thumbnail key={i}>
+                <ListItem thumbnail key={i} style={Styles.listStyle}>
                   <Left>
                     <Thumbnail square source={require('../images/1.jpg')} />
                   </Left>
@@ -65,6 +63,14 @@ export default class StudentList extends Component {
                       <Text>{std.Address}</Text>
                     </Button>
                   </Right>
+                  <View style={Styles.formContainer}>
+                    <Button success>
+                      <Text>Edit</Text>
+                    </Button>
+                    <Button danger>
+                      <Text>Delete</Text>
+                    </Button>
+                  </View>
                 </ListItem>
               );
             })}
@@ -84,9 +90,21 @@ export default class StudentList extends Component {
                 value={this.state.txtAge}
               />
             </Item>
+            <Button style={Styles.btnStyle}>
+              <Text>Add Student</Text>
+            </Button>
           </Form>
         </Content>
       </Container>
     );
   }
 }
+const Styles = StyleSheet.create({
+  formContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  btnStyle: {
+    marginTop: 15,
+  },
+});
