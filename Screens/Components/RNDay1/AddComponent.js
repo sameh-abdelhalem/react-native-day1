@@ -16,14 +16,16 @@ export default class AddComponent extends React.Component {
       Age: this.state.txtAge,
       Address: 'ABC Alex',
     };
-    this.props.customHandler(newStd);
+    this.props.route.params.customHandler(newStd);
     this.setState({
       txtName: '',
       txtAge: '',
     });
+    this.props.navigation.navigate('Home');
   };
 
   render() {
+    console.log(this.props);
     return (
       <Form>
         <Item>

@@ -3,8 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './App';
+import AppRouter from './Screens/Components/RNDay1/AppRouter';
 import {name as appName} from './app.json';
-import AppStart from './Screens/Components/RNDay1/AppStart';
 // import AppStart from './Screens/Components/RNDay1/AppStart';
-AppRegistry.registerComponent(appName, () => AppStart);
+AppRegistry.registerComponent(appName, () => AppRouter);
